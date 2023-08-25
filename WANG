@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          margin:0;
+          height:100vh;
+          background-color: rgb(255, 255, 255);
+        }
+
+        .flex{
+            display: flex;
+        }
+        .baise{
+            background-color: white;
+            box-shadow:rgb(118, 117, 117) 0px 0px 10px;
+        }
+        .column{
+             flex-direction: column;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .mg8{
+            margin:8px ;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgl8{
+            margin-left: 8px;
+        }
+        .dh{
+          padding: 20px 20px;
+          border-bottom: 1px solid rgb(159, 159, 159);
+          font-size: 16px;  
+        }
+    </style>
+</head>
+<body class="flex ">
+    <!--侧边栏-->
+    <div style="width: 300px;z-index: 2;" class="baise ">
+        <div 
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom:2px solid rgb(216, 213, 213);
+        "
+        class="flex baise"
+        >
+        <img src="未标题-1.jpg"
+                width="40px" 
+                height="40px"/>
+        <div style="margin-left: 8px;">何美男</div>
+        </div>
+        <!--导航-->
+        <div class="flex column">
+            <div class="dh">导航</div>
+            <div class="dh">导航</div>
+            <div class="dh">导航</div>
+            <div class="dh">导航</div>
+        </div>
+    </div>
+    <!--主-->
+    <div class="flex flex1 column">
+         <!--头部-->
+        <div style="height: 60px;z-index: 1;" class="baise mgl8 mgr8"></div>
+         <!--内容-->
+         <div style="overflow: auto;" class="flex1 flex">
+            <!--left-->
+            <div style="flex: 3" class="flex column">
+                <!--数据区-->
+                <div class="flex mg8">
+                  <div style="height: 100px" class="flex1 mgr8 baise column"></div>
+                  <div style="height: 100px" class="flex1 mgr8 baise column"></div>
+                  <div style="height: 100px" class="flex1 mgr8 baise column"></div>
+                  <div style="height: 100px" class="flex1 baise column"></div>
+                </div>
+                <!--列表区-->
+                <div class="flex column mg8">
+                    <div style="height: 160px" class="baise"></div>
+                    <div style="height: 160px" class="baise mgt8"></div>
+                    <div style="height: 160px" class="baise mgt8"></div>
+                    <div style="height: 160px" class="baise mgt8"></div>
+                    <div style="height: 160px" class="baise mgt8"></div>
+                </div>
+            </div>
+            <!--right-->
+            <div style="flex: 1" class="flex column">
+            <div style="height: 150px"  class="baise"></div>
+            <div style="height: 300px"  class="baise"></div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
